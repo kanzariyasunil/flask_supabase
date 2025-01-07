@@ -3,9 +3,10 @@ from flask import Flask, jsonify, request
 import os
 from supabase import create_client, Client
 
-
-url: str = os.environ.get("SUPABASE_URL")
-key: str = os.environ.get("SUPABASE_KEY")
+url: str = (
+    "postgres://postgres.kbgnupozmknbfphdcuhn:h5evZx4qUJhNgNOl@aws-0-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require&supa=base-pooler.x"
+)
+key: str = ""
 supabase: Client = create_client(url, key)
 
 
